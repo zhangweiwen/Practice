@@ -1,18 +1,8 @@
-装饰模式
+代理模式
 ========
 
-所谓装饰模式能动态添加功能的说法是错误的,例如某例子说要为这个电话添加蓝牙和GPS功能.
+很简单和容易理解的一种模式
 
-其实根本没有添加功能,只不过是在执行方法的前后额外运行一些方法而已,类似AOP.
+真实做事的类在消费者代码里没有出现
 
-装饰是对方法进行装饰,类的功能永远只有2个.
-
-> public abstract class AbstractCellPhone
-> 
-> {
-> 
->     public abstract string CallNumber();
-> 
->     public abstract string SendMessage();
-> 
-> }
+而代理类只是简单包装一下真实类而已
