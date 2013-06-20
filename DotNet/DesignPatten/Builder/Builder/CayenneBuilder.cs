@@ -10,7 +10,7 @@
 
         public CayenneBuilder()
         {
-            _car = new Car("保时捷2013款Turbo S", 2630000D);
+            _car = new Car("保时捷2013款卡宴Turbo S", 2630000D);
         }
 
         public override void Build()
