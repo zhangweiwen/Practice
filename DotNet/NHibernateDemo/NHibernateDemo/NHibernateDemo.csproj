@@ -47,6 +47,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\packages\System.Data.SQLite.x64.1.0.88.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\packages\System.Data.SQLite.x64.1.0.88.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +75,7 @@
     <Compile Include="TestCases\AutoMappingTest.cs" />
     <Compile Include="TestCases\InverseTest.cs" />
     <Compile Include="TestCases\ProductTest.cs" />
+    <Compile Include="TestCases\SchemaExportTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
