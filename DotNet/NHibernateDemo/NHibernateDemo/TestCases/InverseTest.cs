@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using Iesi.Collections.Generic;
 using NHibernate.Linq;
-using NHibernateDemo.Models;
+using NHibernateDemo.School.Models;
 using NUnit.Framework;
 
 namespace NHibernateDemo.TestCases
@@ -31,7 +33,7 @@ namespace NHibernateDemo.TestCases
             var c1 = new Class
             {
                 Name = "05级一班",
-                Students = new List<Student> { s1 }
+                Students = new List<Student> {s1}
             };
             Session.Save(c1);
             Session.Flush();

@@ -53,6 +53,7 @@
     <Reference Include="System.Data.SQLite.Linq">
       <HintPath>..\packages\System.Data.SQLite.x64.1.0.88.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,27 +61,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mappings\ClassModelMap.cs" />
-    <Compile Include="Mappings\EmployeeMap.cs" />
-    <Compile Include="Mappings\ProductMap.cs" />
-    <Compile Include="Mappings\StoreMap.cs" />
-    <Compile Include="Mappings\StudentMap.cs" />
-    <Compile Include="Models\Class.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\Store.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Permission\Mappings\ActionMap.cs" />
+    <Compile Include="Permission\Mappings\RoleMap.cs" />
+    <Compile Include="Permission\Mappings\UserMap.cs" />
+    <Compile Include="Permission\Models\Action.cs" />
+    <Compile Include="Permission\Models\Role.cs" />
+    <Compile Include="Permission\Models\User.cs" />
+    <Compile Include="School\Mappings\ClassModelMap.cs" />
+    <Compile Include="School\Mappings\StudentMap.cs" />
+    <Compile Include="School\Models\Class.cs" />
+    <Compile Include="School\Models\Gender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="School\Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="TestCases\AutoMappingTest.cs" />
     <Compile Include="TestCases\InverseTest.cs" />
-    <Compile Include="TestCases\ProductTest.cs" />
     <Compile Include="TestCases\SchemaExportTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_Data\NhTest.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Permission\ReadMe.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
